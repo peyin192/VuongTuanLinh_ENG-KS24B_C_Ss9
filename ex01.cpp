@@ -14,7 +14,7 @@ int main() {
 
     currentLength = n;
 
-    printf("Enter element:\n"); //Nhap cac phan tu co trong mang hien tai
+    printf("Enter element:\n");
     for (int i = 0; i < n; i++){
         printf("[%d] = ", i);
         scanf("%d", &arr[i]);
@@ -33,14 +33,14 @@ int main() {
 
     if (addIndex >= currentLength){
         arr[addIndex] = addValue;
-        currentLength = addIndex + 1; //them do dai mang
+        currentLength = addIndex + 1;
     } else {
         //chen phan tu moi
         for (int i = currentLength; i > addIndex; i--) {
             arr[i] = arr[i - 1];
         }
         arr[addIndex] = addValue;
-        currentLength++;  //tang so luong phan tu hien tai
+        currentLength++;
     }
 
     printf("After adding: ");
